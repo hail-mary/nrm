@@ -1,0 +1,26 @@
+# Environment settings
+env_name: "Ant-v5"
+render_mode: "rgb_array"
+
+# Run settings
+num_workers: 5  # Number of parallel workers
+num_iterations: 1000  # Total number of iterations to run
+timesteps_per_iteration: 1000  # Timesteps per iteration
+thresholds: [30, 20] 
+ema_window: 100  # Window size for the EMA of the rewards
+slope_threshold: 1.0
+
+# Model settings
+algorithm: "PPO"  # Algorithm to use
+policy_kwargs:
+  activation_fn: "SiLU"  # Activation function for the network
+  net_arch: {
+    pi: [256, 256],  # Architecture for the policy network
+    vf: [64, 64]   # Architecture for the value function network
+  }
+
+# Device settings
+device: "cpu"  # Device to run the model on (options: "cpu" or "cuda")
+
+# Logging settings
+logdir: "logs"  # Directory to save checkpoints and models

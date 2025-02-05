@@ -1,0 +1,22 @@
+algorithm: PPO
+device: cpu
+ema_window: 100
+env_name: Hopper-v5
+logdir: nrm_hopper
+num_iterations: 1000
+num_workers: 5
+policy_kwargs:
+    activation_fn: SiLU
+    net_arch:
+        pi:
+        - 256
+        - 256
+        vf:
+        - 64
+        - 64
+render_mode: rgb_array
+slope_threshold: 1.0
+thresholds:
+- 30
+- 20
+timesteps_per_iteration: 1000

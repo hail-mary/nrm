@@ -1,0 +1,8 @@
+Training Summary:
+-----------------
+Total Training Time: 0.95 hours
+Ranking Thresholds: [30, 20]
+Slope Threshold: 1.0
+Best Reward: 3612.4559322179366
+Best Iteration: 992
+Best Policy Architecture: {'pi': [170, 158], 'vf': [64, 64]}
